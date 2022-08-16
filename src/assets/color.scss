@@ -1,0 +1,51 @@
+$blue: #3483d2;
+$green: #40c277;
+$yellow: #ffc754;
+$red: #ff622a;
+$purple: #744b8a;
+$gray: #c5ccdb;
+$white: #fff;
+
+$blue-opacity: rgba(52, 131, 210, 0.15);
+$green-opacity: rgba(64, 194, 119, 0.15);
+$yellow-opacity: rgba(255, 199, 84, 0.15);
+$red-opacity: rgba(179, 83, 49, 0.15);
+$purple-opacity: rgba(116, 75, 138, 0.15);
+
+$blue-dark: #1d2e53;
+$blue-light: #516793;
+$blue-gray: #495c87;
+$blue-gray-dark: #364a73;
+$blue-gray-light: #7688b1;
+$blue-sky: #a6b4d0;
+
+/* --------------------------------- */
+
+$border-color: $gray;
+$bg-light-1: #e1e5ee;
+$bg-light-2: #f1f3f8;
+$bg-light-3: #f7fbff;
+$bg-call: #263a64;
+$bg-block: $blue-gray-dark;
+
+$color-text-form: $blue-gray-light;
+$color-placeholder: $blue-sky;
+$border-color-field: $border-color;
+$border-focus: $blue-gray-light;
+
+$text-main: $blue-gray-dark;
+$text-dark: $blue-gray;
+$text-light: $blue-sky;
+
+$text-success: $green;
+$text-primary: $blue;
+$text-warning: $yellow;
+$text-danger: $red;
+
+$bg-success: $green-opacity;
+$bg-primary: $blue-opacity;
+$bg-warning: $yellow-opacity;
+$bg-danger: $red-opacity;
+
+$btn-bg-hover: $border-color;
+$btn-bg-active: $blue-sky;

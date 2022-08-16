@@ -1,0 +1,179 @@
+@import '../../../../assets/color.scss';
+
+.box-dialpad {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 100;
+    &.active {
+        pointer-events: all;
+    }
+    .overlay {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0);
+        transition: 0.4s;
+        z-index: 1;
+        &.active {
+            background: rgba(0, 0, 0, 0.5);
+        }
+    }
+    .dialpad {
+        position: relative;
+        display: block;
+        background: #fff;
+        border: 1px solid #e1e5ee;
+        box-shadow: 0px 0px 12px rgba(54, 74, 115, 0.12);
+        border-radius: 8px;
+        padding: 70px 40px 40px;
+        transform: scale(0);
+        transition: 0.4s;
+        z-index: 2;
+        .btn-close {
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 0;
+            border: 0;
+            background: transparent;
+            span {
+                display: block;
+                position: absolute;
+                top: calc(50% - 1px);
+                left: 0;
+                width: 100%;
+                height: 3px;
+                border-radius: 5px;
+                background: $bg-block;
+                &:first-child {
+                    transform: rotate(45deg);
+                }
+                &:last-child {
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+        .field-number {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 320px;
+            height: 48px;
+            input {
+                width: 100%;
+                height: 100%;
+                border: 1px solid $border-color;
+                border-radius: 4px;
+                background: transparent;
+                padding: 0 12px;
+                font-size: 16px;
+                line-height: 20px;
+            }
+            button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-width: 48px;
+                width: 48px;
+                height: 100%;
+                margin: 0 0 0 10px;
+                border: none;
+                border-radius: 4px;
+                background: #e1e5ee;
+                svg {
+                    width: 25px;
+                    height: 16px;
+                }
+                &:hover {
+                    background: $border-color;
+                }
+                &:active {
+                    background: $blue-sky;
+                }
+            }
+        }
+        .numpad {
+            margin: 70px 0 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: wrap;
+            & > div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                span {
+                    width: 33.3%;
+                }
+            }
+            span {
+                width: 33.3%;
+                height: 48px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                border-radius: 4px;
+                background: #fff;
+                color: $blue-gray;
+                font-size: 24px;
+                line-height: 30px;
+                cursor: pointer;
+                &:hover {
+                    background: #e5e5e5;
+                }
+                &:active {
+                    background: #e1e5ee;
+                }
+            }
+        }
+        &.active {
+            transform: scale(1);
+        }
+    }
+    .get-call {
+        width: 100px;
+        height: 38px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: $green;
+        border: none;
+        border-radius: 4px;
+        margin: 0 auto;
+        svg {
+            width: 14px;
+            height: 14px;
+            color: #fff;
+        }
+        &:hover {
+            background: #3aaf6b;
+        }
+        &:active {
+            background: #339b5f;
+        }
+        &.disabled {     
+            pointer-events: none;
+            background: #A6B4D0;
+            svg {
+                color: #fff;
+            }
+        }
+    }
+    &.active {
+        display: flex;
+    }
+}

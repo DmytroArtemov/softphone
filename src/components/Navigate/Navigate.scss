@@ -1,0 +1,56 @@
+@import '../../assets/color.scss';
+
+.navigate {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: column;
+    width: 100%;
+    max-width: 74px;
+    min-width: 74px;
+    height: calc(100vh - 40px);
+    background: $bg-block;
+    z-index: 20;
+    nav {
+        .listItem {
+            display: block;
+            text-align: center;
+            margin: 20px 0 0;
+            font-size: 16px;
+            line-height: 20px;
+            cursor: pointer;
+            .icon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0 auto 4px;
+                width: 40px;
+                height: 40px;
+                background: $blue-light;
+                border-radius: 4px;
+                svg {
+                    color: $white;
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+            &:hover {
+                .icon {
+                    border: 1px solid $border-focus;
+                }
+            }
+            &.active {
+                span {
+                    color: $white;
+                }
+                .icon {
+                    background: $white;
+                    svg {
+                        color: $bg-block;
+                    }
+                }
+            }
+        }
+    }
+}
