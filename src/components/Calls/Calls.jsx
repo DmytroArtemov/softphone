@@ -9,7 +9,7 @@ const Calls = (props) => {
         <>
             <section className="left-bar">
                 <Search/>
-                <ListCalls callsList={props.callsList} addCalls={props.addCalls} />
+                <ListCalls callsList={props.callsList} />
             </section>
 
             <ProfileCalls />

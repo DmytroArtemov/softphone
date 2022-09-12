@@ -123,21 +123,6 @@ let store = {
     rerenderEntireTree() {
         console.log('State changed');
     },
-    addCalls() {
-        const post = {
-            "id": 4,
-            "contact_id": false,
-            "public_id": "W_LK87H",
-            "type": 2,
-            "status": 2,
-            "destination_type": 1,
-            "phone": "+1234567890",
-            "date": "2022-08-03 14:05:20",
-            "contact_name": "User"
-        }
-        this._state.callsList.push(post);
-        this.rerenderEntireTree(this._state);
-    },
     subscribe(observer) {
         this.rerenderEntireTree = observer;
     }

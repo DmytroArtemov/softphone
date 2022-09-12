@@ -12,7 +12,6 @@ const ListCalls = (props) => {
             type = {el.type}
             status = {el.status}
             date = {el.date}
-            addCalls = {props.addCalls}
         />
     );
 

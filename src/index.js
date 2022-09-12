@@ -6,7 +6,7 @@ import store from './redux/store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 let rerenderEntireTree = (state) => {
-    root.render(<App state={state} addCalls={store.addCalls.bind(store)}/>);
+    root.render(<App state={state} />);
 }
 
 rerenderEntireTree(store.getState());

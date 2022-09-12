@@ -15,8 +15,8 @@ const App = (props) => {
       <div className='main'>
           <Navigate />
           <Routes>
-              <Route path="/" element={<Calls callsList={props.state.callsList} addCalls={props.addCalls}/>} />
-              <Route path="calls" element={<Calls callsList={props.state.callsList} addCalls={props.addCalls}/>} />
+              <Route path="/" element={<Calls callsList={props.state.callsList} />} />
+              <Route path="calls" element={<Calls callsList={props.state.callsList} />} />
               <Route path="contacts" element={<Contacts contactsList={props.state.contactsList}/>} />
               <Route path="*" element={<NotFound />} />
           </Routes>
