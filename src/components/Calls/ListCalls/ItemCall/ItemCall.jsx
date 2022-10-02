@@ -1,10 +1,18 @@
+import { useDispatch } from 'react-redux';
+import { getSeparateCall } from '../../../../redux/users/user-operation';
 import './ItemCall.scss';
 
-const ItemCall = (props) => {
-  let status = '';
-  let destinationType = '';
-
-  switch (props.destinationType) {
+const ItemCall = ({
+  destinationType = '',
+  status = '',
+  phone,
+  name,
+  date,
+  type,
+  idCall,
+}) => {
+  const dispatch = useDispatch();
+  switch (destinationType) {
     case 1:
       destinationType = (
         <path
@@ -31,7 +39,7 @@ const ItemCall = (props) => {
       destinationType = '';
   }
 
-  switch (props.status) {
+  switch (status) {
     case 1:
       status = '';
       break;
@@ -84,7 +92,12 @@ const ItemCall = (props) => {
   };
 
   return (
-    <li className='user-item'>
+    <li
+      className='user-item'
+      onClick={() => {
+        dispatch(getSeparateCall(idCall));
+      }}
+    >
       <div className={'icon ' + status}>
         <svg
           width='12'
@@ -101,15 +114,15 @@ const ItemCall = (props) => {
         </svg>
       </div>
       <div className='client'>
-        <p className={'phone ' + status}>{props.phone}</p>
-        <span className='name'>{props.name}</span>
+        <p className={'phone ' + status}>{phone}</p>
+        <span className='name'>{name}</span>
       </div>
       <div className='info'>
         <div>
-          <span className='day'>{generateDay(props.date)}, </span>
-          <span className='time'>{generateTime(props.date)}</span>
+          <span className='day'>{generateDay(date)}, </span>
+          <span className='time'>{generateTime(date)}</span>
         </div>
-        {props.type === 2 ? (
+        {type === 2 ? (
           <div className='warning status-iternal'>Internal</div>
         ) : (
           ''

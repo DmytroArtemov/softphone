@@ -7,7 +7,7 @@ import { getUsers } from '../../../redux/users/user-selector';
 
 import './ListCalls.scss';
 
-const ListCalls = (props) => {
+const ListCalls = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchCallList());
@@ -19,6 +19,7 @@ const ListCalls = (props) => {
     ({ id, contact_name, phone, destinationType, type, status, date }) => (
       <ItemCall
         key={id}
+        idCall={id}
         name={contact_name}
         phone={phone}
         destinationType={destinationType}

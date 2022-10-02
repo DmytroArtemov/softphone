@@ -8,7 +8,7 @@ import { getContacts } from '../../../redux/users/user-selector';
 
 import './ListContacts.scss';
 
-const ListContacts = (props) => {
+const ListContacts = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchContactList());
@@ -20,6 +20,7 @@ const ListContacts = (props) => {
     ({ id, first_name, last_name, phone, favorite }) => (
       <ItemContact
         key={id}
+        contactId={id}
         firstName={first_name}
         lastName={last_name}
         phone={phone}
