@@ -19,3 +19,21 @@ export const fetchContactListSuccess = createAction(
 );
 
 export const fetchContactError = createAction('users/fetchContactError');
+
+// --- Екшены на получение одного call
+export const fetchOneCallRequest = createAction('users/fetchOneCallRequest');
+
+export const fetchOneCallSuccess = createAction('users/fetchOneCallSuccess');
+
+export const fetchOneCallError = createAction('users/fetchOneCallError');
+
+// --- Екшены на получение одного contact
+export const fetchOneContactRequest = createAction(
+  'users/fetchOneContactRequest'
+);
+
+export const fetchOneContactSuccess = createAction(
+  'users/fetchOneContactSuccess'
+);
+
+export const fetchOneContactError = createAction('users/fetchOneContactError');

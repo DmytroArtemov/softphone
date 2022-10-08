@@ -22,3 +22,21 @@ export const fetchContactList = () => async (dispatch) => {
     .then(({ data }) => dispatch(actions.fetchContactListSuccess(data)))
     .catch((error) => console.log(error.message));
 };
+
+// Асинхронный запрос для получения одного call-a
+export const getSeparateCall = (id) => (dispatch) => {
+  dispatch(actions.fetchOneCallRequest());
+  axios
+    .get(`api/callProfile/${id}`)
+    .then(({ data }) => dispatch(actions.fetchOneCallSuccess(data)))
+    .catch((error) => dispatch(actions.fetchOneCallError(error.message)));
+};
+
+// Асинхронный запрос для получения одного contact-a
+export const getSeparateContact = (id) => (dispatch) => {
+  dispatch(actions.fetchOneContactRequest());
+  axios
+    .get(`api/contactProfile/${id}`)
+    .then(({ data }) => dispatch(actions.fetchOneContactSuccess(data)))
+    .catch((error) => dispatch(actions.fetchOneContactError(error.message)));
+};
