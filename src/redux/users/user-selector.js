@@ -8,4 +8,4 @@ export const getContacts = (state) => state.data.contactList;
 export const getOneCall = (state) => state.data.getOneCall;
 
 // --- Селектор на взятие из State одного contactProfile
-export const getOneContacts = (state) => state.data.getOneContacts;
+export const getOneContact = (state) => state.data.getOneContact;
