@@ -1,22 +1,22 @@
 @import '../../assets/color.scss';
 
 .left-bar {
-    position: relative;
-    right: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-flow: column;
-    width: 298px;
-    min-width: 298px;
-    max-width: 298px;
-    height: calc(100vh - 40px);
-    background: $white;
-    box-shadow: 4px 0px 8px rgba(54, 74, 115, 0.08);
-    z-index: 20;
-    transition: 0.7s;
-    @media screen and (max-width: 1200px) {
-        width: 260px;
-        min-width: 260px;        
-    }
+  position: relative;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: column;
+  width: 298px;
+  min-width: 298px;
+  max-width: 298px;
+  height: calc(100vh - 40px);
+  background: $white;
+  box-shadow: 4px 0px 8px rgba(54, 74, 115, 0.08);
+  z-index: 20;
+  transition: 0.7s;
+  @media screen and (max-width: 1200px) {
+    width: 260px;
+    min-width: 260px;
+  }
 }

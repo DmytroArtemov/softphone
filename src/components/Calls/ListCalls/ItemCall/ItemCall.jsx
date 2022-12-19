@@ -1,5 +1,10 @@
+import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { getSeparateCall } from '../../../../redux/users/user-operation';
+import OutCall from '../../../SipComponents/OutCall/OutCall';
+
+import { AppComponent } from '../../../../SIPml/sipml.js';
+
 import './ItemCall.scss';
 
 const ItemCall = ({
@@ -12,6 +17,11 @@ const ItemCall = ({
   idCall,
 }) => {
   const dispatch = useDispatch();
+  const [id, setId] = useState('');
+
+  const sipInstance = new AppComponent();
+  // console.log(sipInstance);
+
   switch (destinationType) {
     case 1:
       destinationType = (
@@ -96,6 +106,7 @@ const ItemCall = ({
       className='user-item'
       onClick={() => {
         dispatch(getSeparateCall(idCall));
+        sipInstance.sipRegister();
       }}
     >
       <div className={'icon ' + status}>
@@ -128,7 +139,12 @@ const ItemCall = ({
           ''
         )}
       </div>
-      <div className='get-call'>
+      <div
+        className='get-call'
+        onClick={() => {
+          console.log(<OutCall />);
+        }}
+      >
         <div className='icon'>
           <svg
             width='20'
